@@ -1,0 +1,528 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-size: 15pt;
+}
+/*@media only screen and (min-width:1400px){
+  */
+
+nav{
+  width: 1440px;
+  height: 70px;
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+a{
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  margin: 0 10px;
+}
+nav input{
+  width: 240px ;
+  height: 30px;
+  padding: 5px;
+  outline: none;
+}
+nav ul li:hover a{
+  background: limegreen;
+}
+ nav .logo img{
+  width: 300px;
+}
+.salad{
+  width: 1440px;
+  display: fex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.salad-cards , .salad-cards-two{
+  display: f7lex;
+  justify-content: space-around
+}
+.soups{
+  width: 1440px;
+  display:flex;
+    flex-wrap: wrap;
+
+  justify-content: space-around;
+}
+.options{
+  display: flex;
+  width: 1440px;
+  height: 90px;
+  text-align: center;
+}
+.options p {
+  margin: 20px 30px;
+  padding: 5px 20px;
+  width: 220px;
+  height: 40px;
+  background: #ddd;
+}
+header  .first{
+  width: 1440px;
+  padding: 50px 100px;
+  height: 600px;
+  background: rgba(242, 245, 0, 0.9);
+  display: flex;
+  justify-content: center;
+}
+header .first img{
+  margin: auto;
+  position: relative;
+}
+.salad , .soups{
+  width: 1440px;
+  display: block;
+}
+.salad-cards , .salad-cards-two  {
+  display: flex;
+  justify-content: space-around ;
+}
+.salad-card , .soup-card{
+  width: 300px;
+}
+.salad-card img , .soup-card img{
+  width: 100%;
+}
+.salad h1 {
+  padding: 45px 40px;
+}
+.salad h2 , .soups h2{
+  width: 100%;
+  font-size: 18px;
+  padding: 30px 0;
+}
+.salad button , .soups button{
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  height: 30px;
+  background: rgba(221, 215, 24, 1);
+  color: blue;
+  left: 90px;
+  border: none;
+  font-weight: 800;
+  font-size: 17px;
+}
+.btn{
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: rgba(189, 185, 50, 0.7);
+  top: -65px;
+  opacity: 0;
+  display: none;
+}
+
+.salad-card:hover .btn , .soup-card:hover .btn{
+  position: relative;
+  display: block;
+  opacity : 1;
+}
+.soups{
+  display: flex;
+  justify-content: space-around !
+}
+header p{
+  margin-bottom: 20px;
+}
+footer {
+  width: 1440px;
+  padding: 20px 100px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+footer .logo img {
+  width: 250px;
+  padding-top: -20px;
+}
+footer li {
+  list-style: none;
+  padding-top: 40px;
+}
+footer .icon img{
+  width: 40px;
+}
+
+@media only screen and (max-width: 600px){
+ nav{
+   width: 100%;
+   height: 50px;
+   justify-content: space-between ;
+ }
+ .search-inp{
+   display: none;
+ }
+ nav  .logo  img {
+   width: 140px;
+ }
+ header{
+   width: 100%;
+   height: 40px;
+ }
+ header .first {
+   background: transparent;
+ }
+ header .first img{
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 70px;
+   z-index: 1;
+ }
+ .options{
+   align-items: center;
+  display: block;
+
+  margin: 60% 20%;
+ }
+.menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: dodgerblue;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  border-radius: 10px;
+  transition: 0.4s all ;
+  z-index: 1;
+  opacity: 1;
+}
+.menu::before{
+  content: '';
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  background: #fff;
+  top: 10px;
+  left: 7px;
+  box-shadow: 0 19px  #fff;
+  transition: 0.3s;
+}
+.menu::after{
+  content: '';
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  background: #fff;
+  top: 20px;
+  left: 7px;
+  z-index: 10;
+  transition: 0.3s;
+}
+.menuBar{
+  width: 40px;
+  height: 40px;
+  background: red;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  transition: 0.4s all;
+  z-index: 1000;
+}
+.menuBar::before{
+  top: 20px;
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+.menuBar::after{
+  top: 20px;
+  transform: rotate(-45deg)
+}
+.pages {
+  display: none;
+  width: 320px;
+  background: rgba(164, 159, 7, 1);
+  color: dodgerblue;
+  margin-top: 140px;
+  z-index: 107;
+  transition: 0.9;
+
+}
+.pages input {
+  width: 100%;
+  height: 30px;
+  margin: 10px 12px;
+}
+.pagesAf ul {
+  display: block;
+}
+.pagesAf{
+  width: 100vw;
+  position: relative;
+  left: -140px;
+  display: block;
+  z-index: 1;
+  height: auto;
+}
+
+header .first{
+  width: 100%
+  ;
+  height: auto;
+}
+header .salad h1{
+  margin-top: 290px;
+}
+ header .salad{
+  width: 100%;
+  display: block;
+}
+.salad button,  .soups button{
+  width: 50%;
+}
+.salad-cards , .salad-cards-two{
+  display: block;
+  margin: auto;
+  margin: auto;
+}
+.salad-card , .soup-card{
+  margin: auto;
+  width: 80%;
+}
+.soups{
+  width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.container footer{
+  height: auto;
+  width: 100%;
+  margin-top: 4000px; 
+  padding: 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between ;
+}
+footer li{
+  padding-top: 10px;
+}
+footer .logo img{
+  padding: 10px;
+  width: 145px;
+}
+ footer .icons {
+  display: block;
+  position: relative;
+  top: 70px;
+  right: 0;
+  justify-content: space-around;
+}
+footer .icons img{
+  width: 43px;
+}
+ header .fit img {
+   transition: 0.5s;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.menu-lists {
+  display: flex;
+}
+}
+body{
+  overflow-x: hidden;
+  
+}
+#inp {
+  display: none;
+}
+@media only screen and (min-width: 750px)  {
+  nav{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly ;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+.pages{
+  display: flex;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  background: transparent;
+  right: 0;
+}
+a{
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  margin: 0 10px;
+}
+nav input{
+  width: 150px ;
+  height: 30px;
+  padding: 5px;
+  outline: none;
+  margin-left: -90px;
+}
+nav ul li:hover a{
+  background: limegreen;
+}
+ nav .logo img{
+  width: 200px;
+  margin-left: -100px;
+}
+.salad{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.salad-cards , .salad-cards-two{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.soups{
+  width: 100%;
+  display:flex;
+    flex-wrap: wrap;
+
+  justify-content: space-around;
+}
+.options{
+  display: flex;
+  width: 100%;
+  height: 90px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: relative;
+  left: 0;
+}
+.options p {
+  margin: 6px 10px;
+  padding: 2px 7px;
+  width: 220px;
+  height: 40px;
+  background: #ddd;
+}
+header  .first{
+  width: 100%;
+  padding: 50px 100px;
+  height: 600px;
+  background: rgba(242, 245, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  
+}
+header .first img{
+  margin: auto;
+  position: relative;
+}
+.salad , .soups{
+  width: 100%;
+  display: block;
+}
+.salad-cards , .salad-cards-two  {
+  display: flex;
+  justify-content: space-around ;
+}
+.salad-card , .soup-card{
+  width: 300px;
+}
+.salad-card img , .soup-card img{
+  width: 100%;
+}
+.salad h1 {
+  margin-top: 60px;
+  padding: 15px 20px;
+}
+.salad h2 , .soups h2{
+  width: 100%;
+  font-size: 15px;
+  padding: 10px 0;
+}
+.salad button , .soups button{
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  height: 30px;
+  background: rgba(221, 215, 24, 1);
+  color: blue;
+  left: 90px;
+  border: none;
+  font-weight: 800;
+  font-size: 17px;
+}
+.btn{
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: rgba(189, 185, 50, 0.7);
+  top: -65px;
+  opacity: 0;
+  display: none;
+}
+
+.salad-card:hover .btn , .soup-card:hover .btn{
+  position: relative;
+  display: block;
+  opacity : 1;
+}
+.soups{
+  display: flex;
+  justify-content: space-around !
+}
+header p{
+  margin-bottom: 20px;
+}
+footer {
+  width: 100%;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+footer .logo img {
+  width: 250px;
+  padding-top: -20px;
+}
+footer li {
+  list-style: none;
+  padding-top: 40px;
+}
+footer .icon img{
+  width: 40px;
+}
+.btn {
+  width: 100%;
+}
+.btn button{
+  width: 60%;
+}
+.search-inp {
+  display: flex;
+}
+body{
+  overflow-x: hidden;
+}
+}
